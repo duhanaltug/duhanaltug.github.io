@@ -1,0 +1,101 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#container {
+  background-color: pink;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#centered-box {
+  background-image: url("purple-flower.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border: 5px solid #ffb6c1;
+  border-radius: 20px;
+  width: 350px;
+  height: 350px;
+}
+
+#content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#content h1 {
+  background: linear-gradient(to right, #ff69b4, #ff6347);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.confetti {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.animated-box {
+  animation: fadeIn 0.5s ease;
+}
+
+#new-box {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(to right, #ffb6c1, #ff69b4);
+  border: 10px solid transparent;
+  border-image: linear-gradient(to right, #ffb6c1, #ff69b4);
+  border-image-slice: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#new-box h1 {
+  font-size: 34px;
+  background: linear-gradient(to right, #ff69b4, #ff6347);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Mobil cihazlar için stil */
+@media (max-width: 768px) {
+  #centered-box {
+    width: 250px;
+    height: 250px;
+  }
+
+  #new-box {
+    width: 250px;
+    height: 150px;
+  }
+
+  #new-box h1 {
+    font-size: 24px;
+  }
+}
